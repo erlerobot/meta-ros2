@@ -28,7 +28,7 @@ The build can be perform using the next command inside the `~/poky/build` folder
 
 ```
 bitbake core-image-ros2
-``
+```
 
 ## Addrecipes
 
