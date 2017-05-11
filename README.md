@@ -3,7 +3,7 @@ ROS 2 Layer for OpenEmbedded Linux
 
 ## Create a docker container
 
-First a docker container is needed. Use https://github.com/erlerobot/Dockerfiles/tree/master/OpenEmbedded/docker_ros2
+First a docker container is needed. Use https://github.com/erlerobot/Dockerfiles/tree/master/OpenEmbedded/docker_ros2 or check getting Docker container
 
 ```
 git clone https://github.com/erlerobot/Dockerfiles/
@@ -21,6 +21,17 @@ build@a1eaaf9dd67f:~$ cd poky/
 build@a1eaaf9dd67f:~$ source oe-init-build-env
 
 ```
+## Get Docker 
+You can use the base Docker image from docker.erlerobotics.com
+
+```
+docker pull docker.erlerobotics.com/meta-ros2:latest
+docker run -it -v ${PWD}/shared:/home/build/shared docker.erlerobotics.com/meta-ros2:latest
+# inside docker
+build@a1eaaf9dd67f:~$ cd poky/
+build@a1eaaf9dd67f:~$ source oe-init-build-env
+```
+
 
 ## Builds
 
