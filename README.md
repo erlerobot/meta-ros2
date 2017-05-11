@@ -30,7 +30,7 @@ The build can be perform using the next command inside the `~/poky/build` folder
 bitbake core-image-ros2
 ```
 
-## Addrecipes
+## Add recipes
 
 `recipetool` command can be used to generate layer files, these layers needs to be generated inside the `~/poky/build` folder. After should be moved to the meta package.
 For example:
