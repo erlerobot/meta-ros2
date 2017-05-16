@@ -16,3 +16,5 @@ inherit cmake
 # Specify any options you want to pass to cmake using EXTRA_OECMAKE:
 EXTRA_OECMAKE = ""
 
+FILES_${PN} += "${libdir}/* ${sharedir}/*"
+
