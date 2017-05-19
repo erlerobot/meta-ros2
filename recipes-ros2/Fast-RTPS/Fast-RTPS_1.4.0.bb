@@ -19,3 +19,11 @@ inherit cmake pythonnative
 # Specify any options you want to pass to cmake using EXTRA_OECMAKE:
 #EXTRA_OECMAKE = " -DTHIRDPARTY=ON"
 
+EXTRA_OECMAKE = " -DTINYXML2_SOURCE_DIR=/home/build/poky/build/tmp/work/cortexa9hf-neon-poky-linux-gnueabi/tinyxml2/4.0.1-r0/git"
+
+PARALLEL_MAKE="-j 1"
+
+FILES_${PN} += "${libdir}/* ${sharedir}/* /usr/examples/*"
+
+FILES_SOLIBSDEV=""
+
