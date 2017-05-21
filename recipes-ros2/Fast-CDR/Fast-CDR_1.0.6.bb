@@ -18,3 +18,5 @@ EXTRA_OECMAKE = ""
 
 FILES_${PN} += "${libdir}/* ${sharedir}/*"
 
+FILES_SOLIBSDEV=""
+
