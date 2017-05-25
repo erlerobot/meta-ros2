@@ -28,7 +28,8 @@ do_compile () {
 do_install () {
 	install -d ${D}/opt/ros2/src/ament/ament_cmake
 	cp -r ${S}/* ${D}/opt/ros2/src/ament/ament_cmake
-
+#        install -d /home/build/common/opt/ros2/src/ament/ament_cmake
+#        cp -r ${S}/* /home/build/common/opt/ros2/src/ament/ament_cmake
 }
 
 FILES_${PN} += "/opt/ros2/src"

@@ -19,8 +19,25 @@ SRCREV = "${AUTOREV}"
 
 S = "${WORKDIR}/git"
 
-inherit setuptools
+#inherit setuptools
 
-# WARNING: the following rdepends are determined through basic analysis of the
-# python sources, and might not be 100% accurate.
-RDEPENDS_${PN} += "python-core"
+do_configure () {
+        # Specify any needed configure commands here
+        :
+}
+
+do_compile () {
+        # Specify compilation commands here
+        :
+}
+
+do_install () {
+        install -d ${D}/opt/ros2/src/ament/osrf_pycommon
+        cp -r ${S}/* ${D}/opt/ros2/src/ament/osrf_pycommon
+#        install -d /home/build/common/opt/ros2/src/ament/osrf_pycommon
+#        cp -r ${S}/* /home/build/common/opt/ros2/src/ament/osrf_pycommon
+}
+
+FILES_${PN} += "/opt/ros2/src"
+
+

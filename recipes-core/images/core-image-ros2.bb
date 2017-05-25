@@ -28,12 +28,21 @@ IMAGE_INSTALL += " device-tree  \
                   hostapd \
                   rtl8812au \
                   busybox-udhcpd \
-		  Fast-RTPS \
-		  ament-cmake \
-                  "
+		  ros2 \
+		  "
+
 
 IMAGE_FEATURES += " dev-pkgs \
                    debug-tweaks \
                    ssh-server-openssh \
                    package-management"
 
+
+
+
+
+
+#                  Fast-RTPS \
+#                  ament-cmake \
+#                  ament-tools \
+#                  osrf-pycommon \
