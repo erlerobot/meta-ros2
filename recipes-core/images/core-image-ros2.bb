@@ -28,9 +28,9 @@ IMAGE_INSTALL += " device-tree  \
                   hostapd \
                   rtl8812au \
                   busybox-udhcpd \
+		  python3 \
 		  ros2 \
 		  "
-
 
 IMAGE_FEATURES += " dev-pkgs \
                    debug-tweaks \

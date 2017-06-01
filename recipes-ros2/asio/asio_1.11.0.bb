@@ -19,6 +19,8 @@ SRC_URI[sha256sum] = "2c5cb3c53a32d6568716aca5c3298e3b0abfe8faae71ee8bb38b65e93b
 S = "${WORKDIR}/asio-${PV}"
 
 
+DEPENDS = "boost"
+
 # NOTE: if this software is not capable of being built in a separate build directory
 # from the source, you should replace autotools with autotools-brokensep in the
 # inherit line
