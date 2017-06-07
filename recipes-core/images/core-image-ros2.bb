@@ -23,13 +23,15 @@ IMAGE_INSTALL += " device-tree  \
                   wpa-supplicant \
                   wpa-supplicant-passphrase \
                   wpa-supplicant-cli \
-                  ardupilot \
-                  ardupilot-examples \
                   hostapd \
                   rtl8812au \
                   busybox-udhcpd \
 		  python3 \
+		  nano \
 		  ros2 \
+		  python3-argparse \
+		  python3-pip \
+		  python3-setuptools \
 		  "
 
 IMAGE_FEATURES += " dev-pkgs \
@@ -39,10 +41,12 @@ IMAGE_FEATURES += " dev-pkgs \
 
 
 
-
-
+#                  ardupilot \
+#                  ardupilot-examples \
+#
 
 #                  Fast-RTPS \
 #                  ament-cmake \
 #                  ament-tools \
 #                  osrf-pycommon \
+#
