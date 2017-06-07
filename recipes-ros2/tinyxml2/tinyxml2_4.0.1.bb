@@ -10,6 +10,8 @@ SRCREV = "74d44acb176f8510abf28ee0a70961eb26631988"
 
 S = "${WORKDIR}/git"
 
+EXTRA_CXXFLAGS = "-I. -fPIC"
+
 inherit cmake
 
 BBCLASSEXTEND = "native"
