@@ -1,14 +1,11 @@
 #
 # (C) 2017 Erle Robotics - Asier Bilbao <asier@erlerobotics.com>
 #
-# Unable to find any files that looked like license statements. Check the accompanying
-# documentation and source headers and set LICENSE and LIC_FILES_CHKSUM accordingly.
-#
 # NOTE: LICENSE is being set to "CLOSED" to allow you to at least start building - if
 # this is not accurate with respect to the licensing of the software being built (it
 # will not be in most cases) you must specify the correct value before using this
 # recipe for anything other than initial testing/development!
-#require ament-tools.inc
+
 inherit externalsrc
 
 LICENSE = "CLOSED"
@@ -24,41 +21,19 @@ FILES_${PN} += "/opt/ros2/"
 
 DEPENDS = "libeigen opencv python3-nose python3-argparse"
 
-#DEPENDS = "python3 poco asio libtinyxml2"
-
 #DEPENDS = "python3 ament-tools ament-index ament-lint ament-package class-loader common-interfaces console-bridge demos examples geometry2 gmock-vendor gtest-vendor launch osrf-pycommon poco-vendor rcl-interfaces rcl \
 #	rclcpp rclpy realtime-support rmw-connext rmw-fastrtps rmw-implementation rmw-opensplice rmw ros1-bridge rosidl system-tests tlsf rosidl-typesupport uncrustify"
 
-#inherit crosssdk
-#inherit cmake
-#inherit python python-dir python3 python3-dir
-#inherit autotools setuptools3 python3 python3-dir
-###inherit cross
-#inherit setuptools
-##inherit cross
-#inherit bin_package
-#inherit distutils3
-#inherit ros2
-#inherit waf
-
-# Modify these as desired
-#PV = "1.0+git${SRCPV}"
-#SRCREV = "${AUTOREV}"
 
 S = "${WORKDIR}/git"
 
-# NOTE: no Makefile found, unable to determine what needs to be done
 EXTRA_OECMAKE = " -DASIO_INCLUDE_DIR=/usr/include/asio"
 
 
 do_fetch () {
-#	pwd
-#       mkdir src
-#       wget https://raw.githubusercontent.com/ros2/ros2/release-latest/ros2.repos
-#	wget https://raw.githubusercontent.com/ros2/ros2/master/ros2.repos
-#       vcs import src < ros2.repos
 	:
 }
+
 do_configure () {
 	# Specify any needed configure commands here
 	echo ${WORKDIR}
@@ -71,18 +46,11 @@ do_compile () {
 
 	echo ${libdir} ${base_libdir}
 
-#	exit 1
-	# Specify compilation commands here
-
         pwd
 	rm -rf src
         mkdir src
         wget https://raw.githubusercontent.com/ros2/ros2/master/ros2.repos
         vcs import src < ros2.repos
-#	export LD_LIBRARY_PATH=/home/build/poky/build/tmp/sysroots/zynqberry/usr/lib
-#	echo $LD_LIBRARY_PATH
-
-#	export EIGEN3_ROOT=/home/build/poky/build/tmp/work/cortexa9hf-neon-poky-linux-gnueabi/libeigen/3.2.8-r0/image/usr/include/eigen3
 	
 	# do_patch
 	wget https://gist.githubusercontent.com/abilbaotm/c5edce7c3d08771158543f7e3f99a4d3/raw/831481c9a08d006ded5f394f30ccd17a4fe7dd88/0001_Find-Eigen-instead-of-Eigen3.patch
@@ -95,22 +63,6 @@ do_compile () {
         src/ament/ament_tools/scripts/ament.py build --cmake-args -DCMAKE_LIBRARY_PATH=/home/build/poky/build/tmp/sysroots/zynqberry/usr/lib/ \
         -DCMAKE_INSTALL_INCLUDEDIR=/home/build/poky/build/tmp/sysroots/zynqberry/usr/include/ -DCMAKE_LINKER=/home/build/poky/build/tmp/sysroots/x86_64-linux/usr/bin/arm-poky-linux-gnueabi/arm-poky-linux-gnueabi-ld.bfd -DCMAKE_CROSSCOMPILING=1 -DCOMPILE_EXAMPLES=OFF \
         -DEIGEN3_INCLUDE_DIR=/home/build/poky/build/tmp/work/cortexa9hf-neon-poky-linux-gnueabi/libeigen/3.2.8-r0/image/usr/include/eigen3
-
-#	src/ament/ament_tools/scripts/ament.py build --symlink-install --build-space /opt/ros2/build --install-space /opt/ros2/install --cmake-args -DCMAKE_LIBRARY_PATH=/home/build/poky/build/tmp/sysroots/zynqberry/usr/lib/ \
-#	-DCMAKE_INSTALL_INCLUDEDIR=/home/build/poky/build/tmp/sysroots/zynqberry/usr/include/ -DCMAKE_LINKER=/home/build/poky/build/tmp/sysroots/x86_64-linux/usr/bin/arm-poky-linux-gnueabi/arm-poky-linux-gnueabi-ld.bfd -DCMAKE_CROSSCOMPILING=1 -DCOMPILE_EXAMPLES=OFF \
-#	-DEIGEN3_INCLUDE_DIR=/home/build/poky/build/tmp/work/cortexa9hf-neon-poky-linux-gnueabi/libeigen/3.2.8-r0/image/usr/include/eigen3
-
-#        src/ament/ament_tools/scripts/ament.py build --build-tests --symlink-install --cmake-args -DCMAKE_LIBRARY_PATH=/home/build/poky/build/tmp/sysroots/zynqberry/usr/lib/ \
-#        -DCMAKE_INSTALL_INCLUDEDIR=/home/build/poky/build/tmp/sysroots/zynqberry/usr/include/ -DCMAKE_LINKER=/home/build/poky/build/tmp/sysroots/x86_64-linux/usr/bin/arm-poky-linux-gnueabi/arm-poky-linux-gnueabi-ld.bfd
-
-#	src/ament/ament_tools/scripts/ament.py build --build-tests --symlink-install --cmake-args -DCMAKE_PREFIX_PATH=/home/build/poky/build/tmp/sysroots/zynqberry
-
-#	src/ament/ament_tools/scripts/ament.py build --build-tests --symlink-install --cmake-args -DCMAKE_CXX_COMPILER=/home/build/poky/build/tmp/work/x86_64-linux/gcc-cross-arm/6.2.0-r0/sysroot-destdir/home/build/poky/build/tmp/sysroots/x86_64-linux/usr/bin/arm-poky-linux-gnueabi/arm-poky-linux-gnueabi-g++ -DCMAKE_C_COMPILER=/home/build/poky/build/tmp/work/x86_64-linux/gcc-cross-arm/6.2.0-r0/image/home/build/poky/build/tmp/sysroots/x86_64-linux/usr/libexec/arm-poky-linux-gnueabi/gcc/arm-poky-linux-gnueabi/6.2.0/arm-poky-linux-gnueabi-gcc \
-#	-DCMAKE_LIBRARY_PATH=/home/build/poky/build/tmp/sysroots/zynqberry/usr/lib/
-
-#	src/ament/ament_tools/scripts/ament.py build --build-tests --symlink-install \
-#	--cmake-args -DCMAKE_LIBRARY_PATH=/home/build/poky/build/tmp/sysroots/zynqberry/usr/lib/
-
 	:
 }
 
@@ -122,10 +74,5 @@ do_install () {
 	echo ${S}
 	echo "Dest: "
 	echo ${D}/opt/ros2/
-#	exit 1
+	:
 }
-
-
-
-
-
