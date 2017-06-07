@@ -17,10 +17,12 @@ LIC_FILES_CHKSUM = ""
 SRC_URI = "https://github.com/ros2/ros2/archive/${PV}.tar.gz"
 SRC_URI[md5sum] = "55018e99fd650d82972da67dc114c14a"
 SRC_URI[sha256sum] = "9ba04c750022a54fddf49db2b3acf358e1bf18ac8e548d45dd04ef1683498022"
-INSANE_SKIP_${PN} = "arch"
+INSANE_SKIP_${PN} = "arch dev-so dev-deps staticdev ldflags rpaths compile-host-path compile-host-path"
+INSANE_SKIP_${PN}-dev = "ldflags staticdev libdir dev-elf ldflags rpaths compile-host-path"
 INSANE_SKIP_${PN}-dbg += "arch"
+FILES_${PN} += "/opt/ros2/"
 
-DEPENDS = "opencv python3-nose"
+DEPENDS = "libeigen opencv python3-nose python3-argparse"
 
 #DEPENDS = "python3 poco asio libtinyxml2"
 
@@ -80,9 +82,23 @@ do_compile () {
 #	export LD_LIBRARY_PATH=/home/build/poky/build/tmp/sysroots/zynqberry/usr/lib
 #	echo $LD_LIBRARY_PATH
 
+#	export EIGEN3_ROOT=/home/build/poky/build/tmp/work/cortexa9hf-neon-poky-linux-gnueabi/libeigen/3.2.8-r0/image/usr/include/eigen3
+	
+	# do_patch
+	wget https://gist.githubusercontent.com/abilbaotm/c5edce7c3d08771158543f7e3f99a4d3/raw/831481c9a08d006ded5f394f30ccd17a4fe7dd88/0001_Find-Eigen-instead-of-Eigen3.patch
+	patch -t -p0 < 0001_Find-Eigen-instead-of-Eigen3.patch
+	
+	#Remove opencv not working
+	rm -rf src/ros2/demos/image_tools
+	rm -rf src/ros2/demos/intra_process_demo
 
-	src/ament/ament_tools/scripts/ament.py build --cmake-args -DCMAKE_LIBRARY_PATH=/home/build/poky/build/tmp/sysroots/zynqberry/usr/lib/ \
-	-DCMAKE_INSTALL_INCLUDEDIR=/home/build/poky/build/tmp/sysroots/zynqberry/usr/include/ -DCMAKE_LINKER=/home/build/poky/build/tmp/sysroots/x86_64-linux/usr/bin/arm-poky-linux-gnueabi/arm-poky-linux-gnueabi-ld.bfd
+        src/ament/ament_tools/scripts/ament.py build --cmake-args -DCMAKE_LIBRARY_PATH=/home/build/poky/build/tmp/sysroots/zynqberry/usr/lib/ \
+        -DCMAKE_INSTALL_INCLUDEDIR=/home/build/poky/build/tmp/sysroots/zynqberry/usr/include/ -DCMAKE_LINKER=/home/build/poky/build/tmp/sysroots/x86_64-linux/usr/bin/arm-poky-linux-gnueabi/arm-poky-linux-gnueabi-ld.bfd -DCMAKE_CROSSCOMPILING=1 -DCOMPILE_EXAMPLES=OFF \
+        -DEIGEN3_INCLUDE_DIR=/home/build/poky/build/tmp/work/cortexa9hf-neon-poky-linux-gnueabi/libeigen/3.2.8-r0/image/usr/include/eigen3
+
+#	src/ament/ament_tools/scripts/ament.py build --symlink-install --build-space /opt/ros2/build --install-space /opt/ros2/install --cmake-args -DCMAKE_LIBRARY_PATH=/home/build/poky/build/tmp/sysroots/zynqberry/usr/lib/ \
+#	-DCMAKE_INSTALL_INCLUDEDIR=/home/build/poky/build/tmp/sysroots/zynqberry/usr/include/ -DCMAKE_LINKER=/home/build/poky/build/tmp/sysroots/x86_64-linux/usr/bin/arm-poky-linux-gnueabi/arm-poky-linux-gnueabi-ld.bfd -DCMAKE_CROSSCOMPILING=1 -DCOMPILE_EXAMPLES=OFF \
+#	-DEIGEN3_INCLUDE_DIR=/home/build/poky/build/tmp/work/cortexa9hf-neon-poky-linux-gnueabi/libeigen/3.2.8-r0/image/usr/include/eigen3
 
 #        src/ament/ament_tools/scripts/ament.py build --build-tests --symlink-install --cmake-args -DCMAKE_LIBRARY_PATH=/home/build/poky/build/tmp/sysroots/zynqberry/usr/lib/ \
 #        -DCMAKE_INSTALL_INCLUDEDIR=/home/build/poky/build/tmp/sysroots/zynqberry/usr/include/ -DCMAKE_LINKER=/home/build/poky/build/tmp/sysroots/x86_64-linux/usr/bin/arm-poky-linux-gnueabi/arm-poky-linux-gnueabi-ld.bfd
@@ -110,7 +126,6 @@ do_install () {
 }
 
 
-FILES_${PN} += "/opt/ros2/"
 
 
 
