@@ -1,0 +1,12 @@
+--- setup.sh      2017-06-07 13:43:41.559977438 +0000
++++ setup.sh      2017-06-07 13:44:19.099974429 +0000
+@@ -2,7 +2,7 @@
+ 
+ # since this file is sourced use either the provided AMENT_CURRENT_PREFIX
+ # or fall back to the destination set at configure time
+-: ${AMENT_CURRENT_PREFIX:=/home/build/poky/build/tmp/work/cortexa9hf-neon-poky-linux-gnueabi/ros2/release-latest-r0/git/install}
++: ${AMENT_CURRENT_PREFIX:=/opt/ros2}
+ 
+ # set type of shell if not already set
+ : ${AMENT_SHELL:=sh}
+ 
