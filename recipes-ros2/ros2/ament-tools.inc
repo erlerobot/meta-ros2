@@ -29,5 +29,3 @@ asdasd
 FILES_${PN} += "/opt/ros2/src/ament/ament_tools"
 
 BBCLASSEXTEND = "native"
-
-

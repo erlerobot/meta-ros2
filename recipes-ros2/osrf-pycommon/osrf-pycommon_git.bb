@@ -19,25 +19,12 @@ SRCREV = "${AUTOREV}"
 
 S = "${WORKDIR}/git"
 
-#inherit setuptools
-
-do_configure () {
-        # Specify any needed configure commands here
-        :
-}
-
 do_compile () {
-        # Specify compilation commands here
-        :
+        python3 setup.py build
 }
 
 do_install () {
-        install -d ${D}/opt/ros2/src/ament/osrf_pycommon
-        cp -r ${S}/* ${D}/opt/ros2/src/ament/osrf_pycommon
-#        install -d /home/build/common/opt/ros2/src/ament/osrf_pycommon
-#        cp -r ${S}/* /home/build/common/opt/ros2/src/ament/osrf_pycommon
+        sudo python3 setup.py install
 }
 
 FILES_${PN} += "/opt/ros2/src"
-
-
