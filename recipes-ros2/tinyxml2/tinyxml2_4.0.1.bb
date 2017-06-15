@@ -12,6 +12,4 @@ S = "${WORKDIR}/git"
 
 EXTRA_CXXFLAGS = "-I. -fPIC"
 
-inherit cmake
-
-BBCLASSEXTEND = "native"
+inherit ament
