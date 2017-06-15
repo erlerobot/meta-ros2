@@ -19,8 +19,4 @@ SRCREV = "${AUTOREV}"
 
 S = "${WORKDIR}/git"
 
-inherit setuptools ament
-
-# WARNING: the following rdepends are determined through basic analysis of the
-# python sources, and might not be 100% accurate.
-RDEPENDS_${PN} += "python-core"
+inherit ament
