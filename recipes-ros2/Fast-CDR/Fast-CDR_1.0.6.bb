@@ -11,12 +11,4 @@ SRC_URI = "https://github.com/eProsima/Fast-CDR/archive/v${PV}.tar.gz"
 SRC_URI[md5sum] = "5d1bdfde0a80f7fa9e6d2b43a45dd423"
 SRC_URI[sha256sum] = "ce9ee04a7b242721df3a0af98e6ae4f8afe9d536e7d59405322e03a6d251d471"
 
-inherit cmake
-
-# Specify any options you want to pass to cmake using EXTRA_OECMAKE:
-EXTRA_OECMAKE = ""
-
-FILES_${PN} += "${libdir}/* ${sharedir}/*"
-
-FILES_SOLIBSDEV=""
-
+inherit ament
