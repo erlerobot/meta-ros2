@@ -8,12 +8,12 @@ LICENSE = "Apache-2.0"
 LIC_FILES_CHKSUM = "file://LICENSE;md5=3b83ef96387f14655fc854ddc3c6bd57"
 
 SRC_URI = "https://github.com/ros2/demos/archive/${PV}.tar.gz"
-SRC_URI[md5sum] = "26a8be48ff60296ea1bc698bb58fa7bc"
-SRC_URI[sha256sum] = "4079dbb3df665ed428194f0d5924cb69a12284b6a0832ecf6515c87e9779e186"
+SRC_URI[md5sum] = "31466bd19dba913b8ad251066bafce7c"
+SRC_URI[sha256sum] = "99861a5ae6e9c0e63bf5808954ccdce360fba4663c3928d4b660385c1da7ccc6"
 
-DEPENDS = "ament-cmake rclcpp ament-lint"
+DEPENDS = "ament-tools rclcpp"
 
-S = "${WORKDIR}/ament_cmake-${PV}"
+S = "${WORKDIR}/demos-${PV}"
 
 inherit ament
 
