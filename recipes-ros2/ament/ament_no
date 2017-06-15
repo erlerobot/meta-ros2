@@ -1,0 +1,10 @@
+include ament-cmake_release-beta1.inc
+include ament-index_release-beta1.inc
+include ament-lint_release-beta1.inc
+include ament-package_release-beta1.inc
+include ament-tools_release-beta1.inc
+LICENSE = "CLOSED"
+
+inherit ament
+
+S = "${WORKDIR}/ament"

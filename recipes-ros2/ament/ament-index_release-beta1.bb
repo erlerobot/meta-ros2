@@ -7,13 +7,13 @@
 LICENSE = "Apache-2.0"
 LIC_FILES_CHKSUM = "file://LICENSE;md5=3b83ef96387f14655fc854ddc3c6bd57"
 
-DEPENDS = "ament-tools"
+#DEPENDS = "ament-tools"
 
-SRC_URI = "https://github.com/ament/ament_index/archive/${PV}.tar.gz"
-SRC_URI[md5sum] = "26a8be48ff60296ea1bc698bb58fa7bc"
-SRC_URI[sha256sum] = "4079dbb3df665ed428194f0d5924cb69a12284b6a0832ecf6515c87e9779e186"
+SRC_URI = "https://github.com/ament/ament_index/archive/release-beta1.tar.gz"
+SRC_URI[md5sum] = "88cc9c6da2ce89f6a7b3ac8e8da44795"
+SRC_URI[sha256sum] = "d8f35dca26c02c6562e3fe036aec7e613fd6ad8c79fcfcf7a0778cc6b3d4b783"
 
-S = "${WORKDIR}/ament_cmake-${PV}"
+S = "${WORKDIR}/ament_index-${PV}"
 inherit ament
 
-FILES_${PN} += "/opt/ros2/"
+#FILES_${PN} += "/opt/ros2/"
