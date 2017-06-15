@@ -8,12 +8,12 @@ LICENSE = "Apache-2.0"
 LIC_FILES_CHKSUM = "file://LICENSE;md5=3b83ef96387f14655fc854ddc3c6bd57"
 
 SRC_URI = "https://github.com/ros2/rcl/archive/${PV}.tar.gz"
-SRC_URI[md5sum] = "26a8be48ff60296ea1bc698bb58fa7bc"
-SRC_URI[sha256sum] = "4079dbb3df665ed428194f0d5924cb69a12284b6a0832ecf6515c87e9779e186"
-
-S = "${WORKDIR}/ament_cmake-${PV}"
+SRC_URI[md5sum] = "12b9df6d2acf374c38b2d3d0225d1866"
+SRC_URI[sha256sum] = "bc2ed3e8c3addf063b7f9451df2ffcc1ebdf512b84e80602db28facd8f966d59"
 
 DEPENDS = "rcl-interfaces"
+
+S = "${WORKDIR}/rcl-${PV}"
 
 inherit ament
 

@@ -8,11 +8,13 @@ LICENSE = "Apache-2.0"
 LIC_FILES_CHKSUM = "file://LICENSE;md5=3b83ef96387f14655fc854ddc3c6bd57"
 
 SRC_URI = "https://github.com/ros2/rcl_interfaces/archive/${PV}.tar.gz"
-SRC_URI[md5sum] = "26a8be48ff60296ea1bc698bb58fa7bc"
-SRC_URI[sha256sum] = "4079dbb3df665ed428194f0d5924cb69a12284b6a0832ecf6515c87e9779e186"
+SRC_URI[md5sum] = "53813da3ba9ff935cf8901fef8e3008c"
+SRC_URI[sha256sum] = "edad4d68d9bdcfd87f2e2bcef966a4612d762a012cfc9b05be15e5a4ee864c9a"
 
-S = "${WORKDIR}/ament_cmake-${PV}"
+DEPENDS = "rosidl rosidl-typesupport rmw-implementation ament-index"
 
-inherit ament
+S = "${WORKDIR}/rcl_interfaces-${PV}"
+
+inherit ament python3-dir
 
 FILES_${PN} += "/opt/ros2/"
