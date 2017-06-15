@@ -1,0 +1,11 @@
+--- ../rclcpp_lifecycle/CMakeLists.txt	2017-06-15 09:43:31.060842992 +0000
++++ ../rclcpp_lifecycle/CMakeLists.txt	2017-06-15 09:43:47.092944374 +0000
+@@ -3,7 +3,7 @@
+ project(rclcpp_lifecycle)
+ 
+ if(CMAKE_COMPILER_IS_GNUCXX OR CMAKE_CXX_COMPILER_ID MATCHES "Clang")
+-  set(CMAKE_CXX_FLAGS ${CMAKE_CXX_FLAGS} "-std=c++14")
++  set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -std=c++14")
+   add_compile_options(-Wall -Wextra -Wpedantic)
+ endif()
+ 
