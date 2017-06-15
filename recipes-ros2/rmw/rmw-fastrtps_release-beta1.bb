@@ -8,12 +8,12 @@ LICENSE = "Apache-2.0"
 LIC_FILES_CHKSUM = "file://LICENSE;md5=3b83ef96387f14655fc854ddc3c6bd57"
 
 SRC_URI = "https://github.com/ros2/rmw_fastrtps/archive/${PV}.tar.gz"
-SRC_URI[md5sum] = "26a8be48ff60296ea1bc698bb58fa7bc"
-SRC_URI[sha256sum] = "4079dbb3df665ed428194f0d5924cb69a12284b6a0832ecf6515c87e9779e186"
+SRC_URI[md5sum] = "ada93e0725f8ed917f33f1c42167ec58"
+SRC_URI[sha256sum] = "2a8ae81e53067ec9c31fcdd8b72c3700cc5f1cbe946fa831769bcbd0164d99f6"
 
-S = "${WORKDIR}/ament_cmake-${PV}"
+S = "${WORKDIR}/rmw_fastrtps-${PV}"
 
-DEPENDS += "rmw"
+DEPENDS += "rmw Fast-RTPS"
 
 inherit ament
 
