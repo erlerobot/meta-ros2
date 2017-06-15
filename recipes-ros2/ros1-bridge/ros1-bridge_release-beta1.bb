@@ -8,10 +8,10 @@ LICENSE = "Apache-2.0"
 LIC_FILES_CHKSUM = "file://LICENSE;md5=3b83ef96387f14655fc854ddc3c6bd57"
 
 SRC_URI = "https://github.com/ros2/ros1_bridge/archive/${PV}.tar.gz"
-SRC_URI[md5sum] = "26a8be48ff60296ea1bc698bb58fa7bc"
-SRC_URI[sha256sum] = "4079dbb3df665ed428194f0d5924cb69a12284b6a0832ecf6515c87e9779e186"
+SRC_URI[md5sum] = "eda80e29087b68a6c0baa4e534e0365c"
+SRC_URI[sha256sum] = "d36319e875c1e5469a02bca9544a181115b155c891aa6135c06aa8ff88c98201"
 
-S = "${WORKDIR}/ament_cmake-${PV}"
+S = "${WORKDIR}/ros1_bridge-${PV}"
 
 inherit ament
 
