@@ -1,0 +1,10 @@
+--- ../rosidl_typesupport_cpp/CMakeLists.txt	2017-06-16 12:54:34.329735303 +0000
++++ ../rosidl_typesupport_cpp/CMakeLists.txt	2017-06-16 12:54:58.101749148 +0000
+@@ -8,7 +8,7 @@
+
+ find_package(ament_cmake REQUIRED)
+ # provides FindPoco.cmake and Poco on platforms without it
+-find_package(poco_vendor REQUIRED)
++find_package(Poco COMPONENTS Foundation)
+ find_package(Poco REQUIRED COMPONENTS Foundation)
+ find_package(rosidl_generator_c REQUIRED)
