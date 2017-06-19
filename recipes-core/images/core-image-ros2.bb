@@ -23,15 +23,15 @@ IMAGE_INSTALL += " device-tree  \
                   wpa-supplicant \
                   wpa-supplicant-passphrase \
                   wpa-supplicant-cli \
-                  hostapd \
                   rtl8812au \
                   busybox-udhcpd \
 		  python3 \
 		  nano \
-		  ros2 \
 		  python3-argparse \
 		  python3-pip \
 		  python3-setuptools \
+		  examples \
+		  ros2 \
 		  "
 
 IMAGE_FEATURES += " dev-pkgs \
