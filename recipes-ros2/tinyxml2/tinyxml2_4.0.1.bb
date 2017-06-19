@@ -8,6 +8,8 @@ SRC_URI = "git://github.com/leethomason/tinyxml2.git"
 
 SRCREV = "74d44acb176f8510abf28ee0a70961eb26631988"
 
+DEPENDS += "ament-cmake"
+
 S = "${WORKDIR}/git"
 
 EXTRA_CXXFLAGS = "-I. -fPIC"
