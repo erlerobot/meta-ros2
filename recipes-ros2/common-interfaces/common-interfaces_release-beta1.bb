@@ -16,7 +16,7 @@ SRC_URI[sha256sum] = "33bdb7dabf250a3e949798ad6d4745e900a44352901d8dafd838a744e5
 
 S = "${WORKDIR}/common_interfaces-${PV}"
 
-DEPENDS = "ament-cmake"
+DEPENDS = "ament-cmake ament-index rmw-implementation python3-dev"
 
 inherit ament
 
