@@ -5,7 +5,7 @@
 # WARNING: the following LICENSE and LIC_FILES_CHKSUM values are best guesses - it is
 # your responsibility to verify that the values are complete and correct.
 LICENSE = "Apache-2.0"
-LIC_FILES_CHKSUM = "file://LICENSE;md5=3b83ef96387f14655fc854ddc3c6bd57"
+LIC_FILES_CHKSUM = "file://LICENSE;md5=cbbd27594afd089daa160d3a16dd515a"
 
 SRC_URI = "https://github.com/ament/gtest_vendor/archive/${PV}.tar.gz"
 SRC_URI[md5sum] = "7262ce63da8a29c5d6236be20ea70d74"

@@ -4,16 +4,16 @@
 #
 # WARNING: the following LICENSE and LIC_FILES_CHKSUM values are best guesses - it is
 # your responsibility to verify that the values are complete and correct.
-LICENSE = "Apache-2.0"
-LIC_FILES_CHKSUM = "file://LICENSE;md5=3b83ef96387f14655fc854ddc3c6bd57"
+LICENSE = "GPL-2.0"
+LIC_FILES_CHKSUM = "file://COPYING;md5=94d55d512a9ba36caa9b7df079bae19f"
 
 DEPENDS = "ament-tools"
 
 SRC_URI = "https://github.com/ament/uncrustify/archive/${PV}.tar.gz"
-SRC_URI[md5sum] = "26a8be48ff60296ea1bc698bb58fa7bc"
-SRC_URI[sha256sum] = "4079dbb3df665ed428194f0d5924cb69a12284b6a0832ecf6515c87e9779e186"
+SRC_URI[md5sum] = "eafd6a5039f02219a29dfb8bdd82b325"
+SRC_URI[sha256sum] = "63147b293e9ac2d367fc4461d5e4730cebb5acbee085140aeff580c748dac775"
 
-S = "${WORKDIR}/ament_cmake-${PV}"
+S = "${WORKDIR}/uncrustify-${PV}"
 
 inherit ament
 
