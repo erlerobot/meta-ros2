@@ -11,7 +11,7 @@ SRC_URI = "https://github.com/ros2/rcl_interfaces/archive/${PV}.tar.gz"
 SRC_URI[md5sum] = "53813da3ba9ff935cf8901fef8e3008c"
 SRC_URI[sha256sum] = "edad4d68d9bdcfd87f2e2bcef966a4612d762a012cfc9b05be15e5a4ee864c9a"
 
-DEPENDS = "rosidl rosidl-typesupport rmw-implementation ament-index"
+DEPENDS = "rosidl rosidl-typesupport rmw-implementation ament-index ament-cmake rosidl-typesupport osrf-pycommon python3-dev"
 
 S = "${WORKDIR}/rcl_interfaces-${PV}"
 
