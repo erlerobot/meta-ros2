@@ -12,7 +12,7 @@ SRC_URI = "https://github.com/ros2/rosidl_typesupport/archive/${PV}.tar.gz \
 SRC_URI[md5sum] = "fe02932ea86fda6c5d895ee14d33c6c0"
 SRC_URI[sha256sum] = "15cb7023388f78ebe8d1681f07aaddf5ff867c498ee87acfb2be644b8053de26"
 
-DEPENDS = "poco"
+DEPENDS = "poco-vendor rosidl"
 
 S = "${WORKDIR}/rosidl_typesupport-${PV}"
 
