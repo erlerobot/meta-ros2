@@ -7,7 +7,7 @@
 LICENSE = "Apache-2.0"
 LIC_FILES_CHKSUM = "file://LICENSE;md5=4267f48fc738f50380cbeeb76f95cebc"
 
-DEPENDS += "ament-cmake"
+DEPENDS += "ament-cmake libpcre"
 
 SRC_URI = "https://github.com/ros2/poco_vendor/archive/${PV}.tar.gz"
 SRC_URI[md5sum] = "c9e49e7a3ddc3f85cc2be7dd8cb661d2"
