@@ -7,8 +7,7 @@
 LICENSE = "BSD"
 LIC_FILES_CHKSUM = "file://tf2_eigen/package.xml;md5=b834101360f0ce5f572a482094d588df"
 
-#HOMEPAGE = "http://osrf-pycommon.readthedocs.org/"
-#SUMMARY = "Commonly needed Python modules, used by Python software developed at OSRF"
+DEPENDS += "rosidl"
 
 SRC_URI = "git://github.com/ros/geometry2.git;nobranch=1;protocol=https"
 SRCREV = "3a820ee7238e406282c901991186adc6558cdb5e"
