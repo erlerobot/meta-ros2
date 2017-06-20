@@ -30,7 +30,6 @@ IMAGE_INSTALL += " device-tree  \
 		  python3-argparse \
 		  python3-pip \
 		  python3-setuptools \
-		  examples \
 		  ros2 \
 		  "
 
@@ -40,13 +39,3 @@ IMAGE_FEATURES += " dev-pkgs \
                    package-management"
 
 
-
-#                  ardupilot \
-#                  ardupilot-examples \
-#
-
-#                  Fast-RTPS \
-#                  ament-cmake \
-#                  ament-tools \
-#                  osrf-pycommon \
-#
