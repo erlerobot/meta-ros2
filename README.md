@@ -1,6 +1,23 @@
 # meta-ros2
 ROS 2 Layer for OpenEmbedded Linux
 
+## Dependencies
+```
+meta
+meta-poky
+meta-yocto-bsp    = "morty:78890ea22750804e3e9113e76f7ca3d7234c8342"
+meta-xilinx *     = "morty:a24cf71a30de3b5cf665cd91979ea013bf1bb1f4"
+meta-oe
+meta-networking
+meta-filesystems
+meta-python
+meta-systemd      = "morty:fe5c83312de11e80b85680ef237f8acb04b4b26e"
+meta-zynqberry    = "morty:5e062627d75b41647d5ee728ee38057a8290d1e1"
+meta-zynqberry-pxfmini = "master:202fcd1c1fe6f7cefa00b719cc9e0fd0b62c466e"
+* https://github.com/erlerobot/meta-xilinx
+```
+
+# Develop machine
 ## Create a docker container
 
 First a docker container is needed. Use https://github.com/erlerobot/Dockerfiles/tree/master/OpenEmbedded/docker_ros2 or check getting Docker container
@@ -21,7 +38,7 @@ build@a1eaaf9dd67f:~$ cd poky/
 build@a1eaaf9dd67f:~$ source oe-init-build-env
 
 ```
-## Get Docker 
+## Get Docker
 You can use the base Docker image from docker.erlerobotics.com
 
 ```
@@ -35,7 +52,7 @@ build@a1eaaf9dd67f:~$ source oe-init-build-env
 
 ## Builds
 
-The build can be perform using the next command inside the `~/poky/build` folder: 
+The build can be perform using the next command inside the `~/poky/build` folder:
 
 ```
 bitbake core-image-ros2
@@ -58,4 +75,3 @@ recipetool -d create -o Fast-RTPS_1.4.0.bb https://github.com/eProsima/Fast-RTPS
 ```
 docker commit hopeful_kare zynqberry-ros2-base1
 ```
-
