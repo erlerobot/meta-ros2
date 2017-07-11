@@ -1,0 +1,7 @@
+ERROR:  OE-core's config sanity checker detected a potential misconfiguration.
+    Either fix the cause of this error or at your own risk disable the checker (see sanity.conf).
+    Following is the list of potential problems / advisories:
+
+    Failed to create a file with a long name in TMPDIR. Please use a filesystem that does not unreasonably limit filename length.
+Failed to create a file with a long name in SSTATE_DIR. Please use a filesystem that does not unreasonably limit filename length.
+
