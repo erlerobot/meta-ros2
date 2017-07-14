@@ -16,6 +16,7 @@ DEPENDS += "ament-cmake \
 						uncrustify \
 						Fast-CDR \
 						Fast-RTPS \
+						sros2 \
 						class-loader \
 						geometry2 \
 						common-interfaces \

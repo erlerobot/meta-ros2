@@ -7,13 +7,11 @@
 LICENSE = "Apache-2.0"
 LIC_FILES_CHKSUM = "file://LICENSE;md5=3b83ef96387f14655fc854ddc3c6bd57"
 
-SRC_URI = "https://github.com/ros2/rmw_fastrtps/archive/${PV}.tar.gz"
-SRC_URI[md5sum] = "ada93e0725f8ed917f33f1c42167ec58"
-SRC_URI[sha256sum] = "2a8ae81e53067ec9c31fcdd8b72c3700cc5f1cbe946fa831769bcbd0164d99f6"
+SRC_URI = "https://github.com/ros2/rmw/archive/${PV}.tar.gz"
+SRC_URI[md5sum] = "9a2e68ae54bae3fb29e6d4bed5d987ca"
+SRC_URI[sha256sum] = "af160262845c4d71e8c6ef113a29c014c5126af2cca607158d2ff838b1d47d90"
 
-S = "${WORKDIR}/rmw_fastrtps-${PV}"
-
-DEPENDS += "rmw Fast-RTPS"
+S = "${WORKDIR}/rmw-${PV}"
 
 inherit ament
 

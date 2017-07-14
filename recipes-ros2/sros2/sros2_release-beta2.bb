@@ -7,11 +7,14 @@
 LICENSE = "Apache-2.0"
 LIC_FILES_CHKSUM = "file://LICENSE;md5=3b83ef96387f14655fc854ddc3c6bd57"
 
-SRC_URI = "https://github.com/ament/ament_cmake/archive/release-beta1.tar.gz"
-SRC_URI[md5sum] = "26a8be48ff60296ea1bc698bb58fa7bc"
-SRC_URI[sha256sum] = "4079dbb3df665ed428194f0d5924cb69a12284b6a0832ecf6515c87e9779e186"
+SRC_URI = "https://github.com/ros2/sros2/archive/${PV}.tar.gz"
+SRC_URI[md5sum] = "7f3d9dabcec877ae9787aea67a6d1b1f"
+SRC_URI[sha256sum] = "22ce9133aa971d8fe80bad6fc24c8f1b858be015a311b2d8f22fef0bd17b6955"
 
-S = "${WORKDIR}/ament_cmake-${PV}"
+S = "${WORKDIR}/rmw_opensplice-${PV}"
+
+DEPENDS += "openssl rmw"
+
 inherit ament
 
-#FILES_${PN} += "/opt/ros2/"
+FILES_${PN} += "/opt/ros2/"

@@ -10,7 +10,7 @@ LICENSE = "CLOSED"
 LIC_FILES_CHKSUM = ""
 
 SRC_URI = "git://github.com/ros2/ament_cmake_ros.git;protocol=https"
-SRCREV = "597c16149e6b82be3816ffba755fa05169b50dc8"
+SRCREV = "0e8f0152717159bfac572745cbd143f326cbee35"
 
 S = "${WORKDIR}/git"
 

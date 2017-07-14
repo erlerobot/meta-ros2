@@ -24,7 +24,7 @@ SRC_URI = "git://github.com/ros2/orocos_kinematics_dynamics;protocol=https;branc
 
 # Modify these as desired
 PV = "1.0+git${SRCPV}"
-SRCREV = "e93bffc0cb8616523259af533bd49597f2095081"
+SRCREV = "07a4ab6f26393e910a610b4ef91c9921f4c7a3b4"
 
 S = "${WORKDIR}/git"
 

@@ -7,13 +7,15 @@
 LICENSE = "Apache-2.0"
 LIC_FILES_CHKSUM = "file://LICENSE;md5=3b83ef96387f14655fc854ddc3c6bd57"
 
-SRC_URI = "https://github.com/ros2/rmw_opensplice/archive/${PV}.tar.gz"
-SRC_URI[md5sum] = "7e3ece4608330b8d66120eabb5bc31a2"
-SRC_URI[sha256sum] = "8c38cf168e1185782f3c7cf14f29ff88874121fd5c4bc8ab0a545763cd13dab5"
+SRC_URI = "https://github.com/ros2/rosidl_typesupport/archive/${PV}.tar.gz \
+          file://0001.Fix_poco_find_package.patch \
+          file://0002.Fix_poco_find_package.patch"
+SRC_URI[md5sum] = "719b25017b9942a6f87cc1648d6cb321"
+SRC_URI[sha256sum] = "57006c054b327c26400aad800cd6961384e5acf4a3e5616df1d541f5018b4b80"
 
-S = "${WORKDIR}/rmw_opensplice-${PV}"
+DEPENDS = "poco poco-vendor rosidl"
 
-DEPENDS += "rmw"
+S = "${WORKDIR}/rosidl_typesupport-${PV}"
 
 inherit ament
 

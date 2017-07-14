@@ -7,10 +7,11 @@
 LICENSE = "Apache-2.0"
 LIC_FILES_CHKSUM = "file://LICENSE;md5=3b83ef96387f14655fc854ddc3c6bd57"
 
-SRC_URI = "https://github.com/ros2/rosidl/archive/${PV}.tar.gz"
-SRC_URI[md5sum] = "38bec990450cdbaacdaea6527665c6c8"
-SRC_URI[sha256sum] = "74863b24415b1deb0cc79992b6c015b153a9f2c33fb989757fcdcde87b6dec6d"
+SRC_URI = "https://github.com/ament/ament_cmake/archive/${PV}.tar.gz"
+SRC_URI[md5sum] = "056709a3d7d6c378cd704e95690d462f"
+SRC_URI[sha256sum] = "71ac986ac774d98309e59d570578e894634b1068811baec4832b8388b06bb25a"
 
-S = "${WORKDIR}/rosidl-${PV}"
-
+S = "${WORKDIR}/ament_cmake-${PV}"
 inherit ament
+
+#FILES_${PN} += "/opt/ros2/"

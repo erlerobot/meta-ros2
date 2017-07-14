@@ -7,13 +7,11 @@
 LICENSE = "Apache-2.0"
 LIC_FILES_CHKSUM = "file://LICENSE;md5=3b83ef96387f14655fc854ddc3c6bd57"
 
-SRC_URI = "https://github.com/ros2/demos/archive/${PV}.tar.gz"
-SRC_URI[md5sum] = "31466bd19dba913b8ad251066bafce7c"
-SRC_URI[sha256sum] = "99861a5ae6e9c0e63bf5808954ccdce360fba4663c3928d4b660385c1da7ccc6"
+SRC_URI = "https://github.com/ros2/ros1_bridge/archive/${PV}.tar.gz"
+SRC_URI[md5sum] = "f4b4095dca96d0c535e54529aad2ea02"
+SRC_URI[sha256sum] = "6d472b35cd25df43ae64708498f45b394320a459ba0c0345187a7235ff65f636"
 
-DEPENDS = "ament-tools rclcpp class-loader opencv example-interface"
-
-S = "${WORKDIR}/demos-${PV}"
+S = "${WORKDIR}/ros1_bridge-${PV}"
 
 inherit ament
 

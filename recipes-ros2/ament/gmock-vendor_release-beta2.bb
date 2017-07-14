@@ -5,16 +5,14 @@
 # WARNING: the following LICENSE and LIC_FILES_CHKSUM values are best guesses - it is
 # your responsibility to verify that the values are complete and correct.
 LICENSE = "Apache-2.0"
-LIC_FILES_CHKSUM = "file://LICENSE;md5=3b83ef96387f14655fc854ddc3c6bd57"
+LIC_FILES_CHKSUM = "file://LICENSE;md5=cbbd27594afd089daa160d3a16dd515a"
 
-SRC_URI = "https://github.com/ros2/realtime_support/archive/${PV}.tar.gz"
-SRC_URI[md5sum] = "17c6ea09d7d398c94406c3607ec59afa"
-SRC_URI[sha256sum] = "564f8c64db51716a517a1f4ee65a4702a659004403055c4980737c7369feaac9"
+SRC_URI = "https://github.com/ament/gmock_vendor/archive/${PV}.tar.gz"
+SRC_URI[md5sum] = "a74cf316bdbce1da714c025f71359b0d"
+SRC_URI[sha256sum] = "4052fe71134610bcfd42641b3cba99b4190e0b69a12206af03fac384e6d9d657"
 
-DEPENDS += "tlsf"
-
-S = "${WORKDIR}/realtime_support-${PV}"
+S = "${WORKDIR}/gmock_vendor-${PV}"
 
 inherit ament
 
-FILES_${PN} += "/opt/ros2/"
+FILES_${PN} += "/opt/ros2"
