@@ -13,6 +13,8 @@ SRC_URI[sha256sum] = "af160262845c4d71e8c6ef113a29c014c5126af2cca607158d2ff838b1
 
 S = "${WORKDIR}/rmw-${PV}"
 
+DEPENDS+="ament-cmake-ros rcutils"
+
 inherit ament
 
 FILES_${PN} += "/opt/ros2/"
