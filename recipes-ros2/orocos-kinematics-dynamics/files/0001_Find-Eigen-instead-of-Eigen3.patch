@@ -1,6 +1,6 @@
 --- git/orocos_kdl/CMakeLists.txt
 +++ git/orocos_kdl/CMakeLists.txt
-@@ -42,7 +42,7 @@
+@@ -45,7 +45,7 @@
 
  SET( KDL_CFLAGS "")
 

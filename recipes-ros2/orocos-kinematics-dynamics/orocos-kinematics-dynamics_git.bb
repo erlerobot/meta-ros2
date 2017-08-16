@@ -19,8 +19,8 @@ LICENSE = "Unknown"
 LIC_FILES_CHKSUM = "file://orocos_kdl/COPYING;md5=a8ffd58e6eb29a955738b8fcc9e9e8f2 \
                     file://orocos_kdl/debian/copyright;md5=4b446a49bb1cef5801a152ac8ee5d814"
 
-SRC_URI = "git://github.com/ros2/orocos_kinematics_dynamics;protocol=https;branch=ros2 \
-          file://0001_Find-Eigen-instead-of-Eigen3.patch"
+SRC_URI = "git://github.com/ros2/orocos_kinematics_dynamics;protocol=https;branch=ros2"
+#SRC_URI += "file://0001_Find-Eigen-instead-of-Eigen3.patch"
 
 # Modify these as desired
 PV = "1.0+git${SRCPV}"

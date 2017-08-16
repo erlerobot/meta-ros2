@@ -14,7 +14,7 @@ SRC_URI = "https://github.com/ros2/rosidl_dds/archive/${PV}.tar.gz"
 SRC_URI[md5sum] = "4f6f03fe7386edd2d80b80594ad37979"
 SRC_URI[sha256sum] = "30acbe1c9ce10838a4fd6b708b7de76aae6c8daa1e4c5e871ed4f087b10a6f83"
 
-S = "${WORKDIR}/ament_tools-${PV}"
+S = "${WORKDIR}/rosidl_dds-${PV}"
 
 DEPENDS += "ament-package osrf-pycommon"
 
