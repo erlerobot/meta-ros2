@@ -9,7 +9,7 @@ inherit setuptools
 LICENSE = "CLOSED"
 LIC_FILES_CHKSUM = ""
 
-DEPENDS += "rosidl rosidl-typesupport ament-cmake"
+DEPENDS += "rosidl rosidl-typesupport ament-cmake rmw-fastrtps"
 
 SRC_URI = "git://github.com/ros2/example_interfaces.git;protocol=https"
 SRCREV = "dfcbbd8ead5fc254daee76166710fdd254b902f5"
