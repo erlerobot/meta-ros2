@@ -5,12 +5,12 @@
 # WARNING: the following LICENSE and LIC_FILES_CHKSUM values are best guesses - it is
 # your responsibility to verify that the values are complete and correct.
 LICENSE = "BSD"
-LIC_FILES_CHKSUM = "file://tf2_eigen/package.xml;md5=b834101360f0ce5f572a482094d588df"
+LIC_FILES_CHKSUM = "file://tf2_eigen/package.xml;md5=0e1b8f1652a6bd32eb68d824c405ce99"
 
-DEPENDS += "ament-cmake console-bridge rosidl rosidl-typesupport"
+DEPENDS += "ament-cmake common-interfaces console-bridge rosidl rosidl-typesupport rclcpp orocos-kinematics-dynamics"
 
-SRC_URI = "git://github.com/ros/geometry2.git;nobranch=1;protocol=https"
-SRCREV = "3a820ee7238e406282c901991186adc6558cdb5e"
+SRC_URI = "git://github.com/ros2/geometry2.git;branch=ros2;protocol=https"
+SRCREV = "a275730813b9cf55943f3f05d57aaee51b32944a"
 
 S = "${WORKDIR}/git"
 
