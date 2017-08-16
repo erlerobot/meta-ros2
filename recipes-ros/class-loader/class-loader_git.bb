@@ -11,9 +11,9 @@ LIC_FILES_CHKSUM = "file://package.xml;md5=95aa7c593d5862fa93efc3cda8f24666"
 #SUMMARY = "Commonly needed Python modules, used by Python software developed at OSRF"
 
 SRC_URI = "git://github.com/ros/class_loader.git;protocol=https;branch=ros2"
-SRCREV = "a7e9af992f9fb3ba6b859203a322153ee82f4de5"
+SRCREV = "1f1793e3dc0b93430ba430d62574078d17c2c0ef"
 
-DEPENDS += "console-bridge"
+DEPENDS += "console-bridge ament-cmake poco poco-vendor"
 
 S = "${WORKDIR}/git"
 
