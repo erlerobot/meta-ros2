@@ -7,9 +7,9 @@
 LICENSE = "Apache-2.0"
 LIC_FILES_CHKSUM = "file://LICENSE;md5=3b83ef96387f14655fc854ddc3c6bd57"
 
-SRC_URI = "https://github.com/ament/ament_package/archive/release-beta1.tar.gz"
-SRC_URI[md5sum] = "7fa6d042e07e044ec1f4f0fef5ab2169"
-SRC_URI[sha256sum] = "04cd8189e45e431ad372a1b6520c76132eb54556c829e91d76976ee50ddd9a07"
+SRC_URI = "https://github.com/ament/ament_package/archive/${PV}.tar.gz"
+SRC_URI[md5sum] = "9a9ed4a41c73abf9ea50417b539c35cc"
+SRC_URI[sha256sum] = "f3bc857f8bf3ca44cd83d69271fb027688df4a3f3e757fd87800fba5b582b5fd"
 
 S = "${WORKDIR}/ament_package-${PV}"
 inherit ament

@@ -7,7 +7,7 @@
 LICENSE = "GPL-2.0"
 LIC_FILES_CHKSUM = "file://COPYING;md5=94d55d512a9ba36caa9b7df079bae19f"
 
-DEPENDS = "ament-tools"
+DEPENDS = "ament-tools ament-cmake"
 
 SRC_URI = "https://github.com/ament/uncrustify/archive/${PV}.tar.gz"
 SRC_URI[md5sum] = "3b290cbb9b5037b4b2d4aa2d6dc91f71"
