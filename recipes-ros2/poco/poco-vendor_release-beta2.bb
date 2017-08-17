@@ -9,7 +9,7 @@ LIC_FILES_CHKSUM = "file://LICENSE;md5=4267f48fc738f50380cbeeb76f95cebc"
 
 DEPENDS += "ament-cmake libpcre"
 
-SRC_URI = "https://github.com/ros2/poco_vendor/archive/${PV}.tar.gz"
+SRC_URI = "https://github.com/ros2/poco_vendor/archive/${PV}.tar.gz";downloadfilename=ros2_${PN}_${PV}.tar.gz"
 SRC_URI[md5sum] = "267fbdcd54f02d087c5375ac7addf133"
 SRC_URI[sha256sum] = "2e062f7110d95b6b6f5749fdf6c0a1048c2fc76f48b3cb98edf113afbac0a390"
 

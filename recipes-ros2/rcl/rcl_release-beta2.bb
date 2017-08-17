@@ -7,7 +7,7 @@
 LICENSE = "Apache-2.0"
 LIC_FILES_CHKSUM = "file://LICENSE;md5=3b83ef96387f14655fc854ddc3c6bd57"
 
-SRC_URI = "https://github.com/ros2/rcl/archive/${PV}.tar.gz"
+SRC_URI = "https://github.com/ros2/rcl/archive/${PV}.tar.gz";downloadfilename=ros2_${PN}_${PV}.tar.gz"
 SRC_URI[md5sum] = "e6430254dcad5a8994849033c7a03bef"
 SRC_URI[sha256sum] = "6d2e0a596ef28a54094fa344b358c00ddd455bcc87dceb3d50e78d7fc8e8ef62"
 

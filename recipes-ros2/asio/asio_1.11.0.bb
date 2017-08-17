@@ -13,7 +13,7 @@ LICENSE = "Unknown"
 LIC_FILES_CHKSUM = "file://LICENSE_1_0.txt;md5=e4224ccaecb14d942c71d31bef20d78c \
                     file://COPYING;md5=473185767da32bfe1c75719e82dbd850"
 
-SRC_URI = "https://erlerobotics.com/test/asio-${PV}.tar.gz"
+SRC_URI = "https://erlerobotics.com/test/asio-${PV}.tar.gz";downloadfilename=ros2_${PN}_${PV}.tar.gz"
 SRC_URI[md5sum] = "944b98542af0535374a014756a2e9702"
 SRC_URI[sha256sum] = "2c5cb3c53a32d6568716aca5c3298e3b0abfe8faae71ee8bb38b65e93bb0aa6a"
 S = "${WORKDIR}/asio-${PV}"
