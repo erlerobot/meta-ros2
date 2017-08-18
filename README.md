@@ -2,8 +2,8 @@
 ROS 2 Layer for OpenEmbedded Linux
 
 
-# THIS IS A DEVELOPMENT PROJECT
-This project may contain bugs and have not being tested at all. Use under your own risk, but fell free to test, make pull request and improve this porject.
+# THIS PROJECT IS UNDER DEVELOPMENT
+This project may contain bugs and have not being tested at all. Use under your own risk, but feel free to test, make pull request and improve this project.
 
 Actually a main bug is causing that the Python3 writen programs not to work. If youy get the next error: `ImportError: No module named 'rclpy._rclpy'` refer to https://discourse.ros.org/t/import-error-no-module-named-rclpy--rclpy-cross-compiling/2463
 
