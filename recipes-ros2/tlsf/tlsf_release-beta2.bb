@@ -5,7 +5,7 @@
 # WARNING: the following LICENSE and LIC_FILES_CHKSUM values are best guesses - it is
 # your responsibility to verify that the values are complete and correct.
 LICENSE = "Apache-2.0"
-LIC_FILES_CHKSUM = "file://LICENSE;md5=3b83ef96387f14655fc854ddc3c6bd57"
+LIC_FILES_CHKSUM = "file://tlsf/LICENSE;md5=40d2542b8c43a3ec2b7f5da31a697b88"
 
 SRC_URI = "https://github.com/ros2/tlsf/archive/${PV}.tar.gz;downloadfilename=ros2_${PN}_${PV}.tar.gz"
 SRC_URI[md5sum] = "fbe4aa591c088f2966eee1c8287b9b04"

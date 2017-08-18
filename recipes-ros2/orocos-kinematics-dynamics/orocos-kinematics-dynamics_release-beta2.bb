@@ -15,24 +15,18 @@
 #   orocos_kdl/COPYING
 #   orocos_kdl/debian/copyright
 #
-LICENSE = "Unknown"
+LICENSE = "CLOSED"
 LIC_FILES_CHKSUM = "file://orocos_kdl/COPYING;md5=a8ffd58e6eb29a955738b8fcc9e9e8f2 \
                     file://orocos_kdl/debian/copyright;md5=4b446a49bb1cef5801a152ac8ee5d814"
 
-SRC_URI = "git://github.com/ros2/orocos_kinematics_dynamics;protocol=https;branch=ros2"
-#SRC_URI += "file://0001_Find-Eigen-instead-of-Eigen3.patch"
+SRC_URI = "https://github.com/ros2/orocos_kinematics_dynamics/archive/${PV}.tar.gz;downloadfilename=ros2_${PN}_${PV}.tar.gz \
+	file://0001_Find-Eigen-instead-of-Eigen3.patch"
+SRC_URI[md5sum] = "7754c1af9f1e7444ee1437fdc72c7e2d"
+SRC_URI[sha256sum] = "47d4422689c8e68b7714b342d7d0718f9ea1e88694ee167789924d30cf3a8fd3"
 
-# Modify these as desired
-PV = "1.0+git${SRCPV}"
-SRCREV = "07a4ab6f26393e910a610b4ef91c9921f4c7a3b4"
+S = "${WORKDIR}/orocos_kinematics_dynamics-${PV}"
 
-S = "${WORKDIR}/git"
-
-inherit ament
-#do_patch () {
-#  #Remove opencv not working
-#  rm -rf ${S}/src/ros2/demos/image_tools
-#  rm -rf ${S}/src/ros2/demos/intra_process_demo
-#}
 
 FILES_${PN} += "/opt/ros2/"
+
+inherit ament
