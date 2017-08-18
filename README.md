@@ -1,6 +1,12 @@
 # meta-ros2
 ROS 2 Layer for OpenEmbedded Linux
 
+
+# THIS IS A DEVELOPMENT PROJECT
+This project may contain bugs and have not being tested at all. Use under your own risk, but fell free to test, make pull request and improve this porject.
+
+Actually a main bug is causing that the Python3 writen programs not to work. If youy get the next error: `ImportError: No module named 'rclpy._rclpy'` refer to https://discourse.ros.org/t/import-error-no-module-named-rclpy--rclpy-cross-compiling/2463
+
 ## Dependencies
 ```
 meta
@@ -76,6 +82,7 @@ recipetool -d create -o Fast-RTPS_1.4.0.bb https://github.com/eProsima/Fast-RTPS
 docker commit hopeful_kare zynqberry-ros2-base1
 ```
 
+## Debug
 
-
+Probably you will need to install the next repo inside docker, launching the setup.py file
 https://github.com/ament/ament_python
