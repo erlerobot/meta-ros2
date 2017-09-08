@@ -84,5 +84,5 @@ docker commit hopeful_kare zynqberry-ros2-base1
 
 ## Debug
 
-Probably you will need to install the next repo inside docker, launching the `setup.py file
+Probably you will need to install the next repo inside docker, launching the `setup.py` file
 https://github.com/ament/ament_python
