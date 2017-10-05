@@ -26,16 +26,6 @@ ament_do_compile() {
   -Wno-dev 
 }
 
-#  -DENABLE_PRECOMPILED_HEADERS=OFF
-
-
-### /home/build/poky/build/tmp/sysroots/zynqberry/usr/lib/libpcre.so
-
-# fastcdr_DIR
-
-#-DPYTHON_INCLUDE_DIRS=/home/build/poky/build/tmp/sysroots/zynqberry/usr/include/python3.5m
-#-DPYTHON_LIBRARIES=/home/build/poky/build/tmp/sysroots/zynqberry/usr/lib/libpython3.5m.so
-#
 
 ament_do_install () {
 #	install -d ${D}/opt/ros2/
@@ -51,9 +41,3 @@ FILES_${PN} += "\
 
 EXPORT_FUNCTIONS do_compile do_install
 ALLOW_EMPTY_${PN} = "1"
-
-
-
-
-#  -DPoco_DIR=${STAGING_DIR_HOST}/usr/lib/cmake/Poco/ \
-#
