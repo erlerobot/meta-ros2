@@ -24,6 +24,22 @@ meta-zynqberry-pxfmini = "master:202fcd1c1fe6f7cefa00b719cc9e0fd0b62c466e"
 ```
 
 # Develop machine
+
+## Compile natively (without docker)
+
+### Dependencies
+
+```bash
+cd ~
+git clone https://github.com/ament/ament_package
+cd ~/ament_package
+sudo python3 setup.py install
+cd ~
+git clone https://github.com/ament/ament_tools
+cd ~/ament_tools
+sudo python3 setup.py install
+```
+
 ## Create a docker container
 
 First a docker container is needed. Use https://github.com/erlerobot/Dockerfiles/tree/master/OpenEmbedded/docker_ros2 or check getting Docker container
