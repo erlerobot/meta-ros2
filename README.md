@@ -38,6 +38,11 @@ cd ~
 git clone https://github.com/ament/ament_tools
 cd ~/ament_tools
 sudo python3 setup.py install
+cd ~
+git clone https://github.com/ament/ament_python
+cd ~/ament_python
+git checkout release-beta2
+sudo python3 setup.py install
 ```
 
 ## Create a docker container
