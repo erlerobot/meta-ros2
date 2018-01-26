@@ -8,8 +8,8 @@ LICENSE = "Apache-2.0"
 LIC_FILES_CHKSUM = "file://LICENSE;md5=3b83ef96387f14655fc854ddc3c6bd57"
 
 SRC_URI = "https://github.com/ros2/rmw/archive/${PV}.tar.gz;downloadfilename=ros2_${PN}_${PV}.tar.gz"
-SRC_URI[md5sum] = "9a2e68ae54bae3fb29e6d4bed5d987ca"
-SRC_URI[sha256sum] = "af160262845c4d71e8c6ef113a29c014c5126af2cca607158d2ff838b1d47d90"
+SRC_URI[md5sum] = "9273072ed61653bbe4192d0b8f12701f"
+SRC_URI[sha256sum] = "534a18cc3f35c8ede94e0c47175ca89ac425c8dd71b2a54488bfa2c19dbffcdf"
 
 S = "${WORKDIR}/rmw-${PV}"
 
