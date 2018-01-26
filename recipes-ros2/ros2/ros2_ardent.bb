@@ -58,8 +58,6 @@ DEPENDS = " \
 	urdf \
 	urdfdom-headers \
 	"
-#	tinyxml-vendor \
-#
 
 do_install () {
 	mkdir -p ${D}/opt/ros2/
