@@ -21,8 +21,8 @@ LIC_FILES_CHKSUM = "file://orocos_kdl/COPYING;md5=a8ffd58e6eb29a955738b8fcc9e9e8
 
 SRC_URI = "https://github.com/ros2/orocos_kinematics_dynamics/archive/${PV}.tar.gz;downloadfilename=ros2_${PN}_${PV}.tar.gz \
 	file://0001_Find-Eigen-instead-of-Eigen3.patch"
-SRC_URI[md5sum] = "7754c1af9f1e7444ee1437fdc72c7e2d"
-SRC_URI[sha256sum] = "47d4422689c8e68b7714b342d7d0718f9ea1e88694ee167789924d30cf3a8fd3"
+SRC_URI[md5sum] = "06692ed13d1ea682c2b62d15d85ca892"
+SRC_URI[sha256sum] = "62916bebb62c4d14d4a8adfa412eda78378269079d0d9a7f7b9b3c55e8a40fe8"
 
 S = "${WORKDIR}/orocos_kinematics_dynamics-${PV}"
 
