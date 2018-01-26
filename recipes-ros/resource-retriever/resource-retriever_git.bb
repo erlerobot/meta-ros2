@@ -6,14 +6,11 @@
 # your responsibility to verify that the values are complete and correct.
 LICENSE = "CLOSED"
 
-#HOMEPAGE = "http://osrf-pycommon.readthedocs.org/"
-#SUMMARY = "Commonly needed Python modules, used by Python software developed at OSRF"
-
-SRC_URI = "git://github.com/ros/class_loader.git;protocol=https;branch=ros2;"
-SRCREV = "bc6f6311fe1970c29bc5e137bf65c5125329b741"
-
-DEPENDS += "console-bridge ament-cmake poco"
+SRC_URI = "git://github.com/ros/resource_retriever.git;protocol=https;branch=ardent"
+SRCREV = "04a2512ec4b583fb8a1eb4aa8f543e8a451c5e2d"
 
 S = "${WORKDIR}/git"
+
+DEPENDS += "ament-index curl"
 
 inherit ament

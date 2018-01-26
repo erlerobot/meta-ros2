@@ -4,16 +4,15 @@
 #
 # WARNING: the following LICENSE and LIC_FILES_CHKSUM values are best guesses - it is
 # your responsibility to verify that the values are complete and correct.
-LICENSE = "CLOSED"
+LICENSE = "BDS"
+LIC_FILES_CHKSUM = "file://src/console.cpp;md5=2391cb1aafb648f6fb0f7f0f7bcd03ee"
 
-#HOMEPAGE = "http://osrf-pycommon.readthedocs.org/"
-#SUMMARY = "Commonly needed Python modules, used by Python software developed at OSRF"
+SRC_URI = "git://github.com/ros/pluginlib.git;protocol=https;branch=ardent"
+SRCREV = "d8e20dff8891057138e8e85f6c8816d66c651190"
 
-SRC_URI = "git://github.com/ros/class_loader.git;protocol=https;branch=ros2;"
-SRCREV = "bc6f6311fe1970c29bc5e137bf65c5125329b741"
-
-DEPENDS += "console-bridge ament-cmake poco"
 
 S = "${WORKDIR}/git"
+
+DEPENDS += "ament-index ament-cmake class-loader libtinyxml2"
 
 inherit ament
