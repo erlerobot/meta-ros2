@@ -8,10 +8,10 @@ LICENSE = "Apache-2.0"
 LIC_FILES_CHKSUM = "file://LICENSE;md5=3b83ef96387f14655fc854ddc3c6bd57"
 
 SRC_URI = "https://github.com/ros2/rcl/archive/${PV}.tar.gz;downloadfilename=ros2_${PN}_${PV}.tar.gz"
-SRC_URI[md5sum] = "e6430254dcad5a8994849033c7a03bef"
-SRC_URI[sha256sum] = "6d2e0a596ef28a54094fa344b358c00ddd455bcc87dceb3d50e78d7fc8e8ef62"
+SRC_URI[md5sum] = "38b5584022f70e67c34de7a250adaf01"
+SRC_URI[sha256sum] = "a10c51b2dfc153779cc5ebb16d13b9888458d49117400db0b6afd652346c27d7"
 
-DEPENDS = "rcl-interfaces"
+DEPENDS = "rcl-interfaces rmw-implementation"
 
 S = "${WORKDIR}/rcl-${PV}"
 
