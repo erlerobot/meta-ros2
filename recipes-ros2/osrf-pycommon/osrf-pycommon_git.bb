@@ -15,7 +15,7 @@ SUMMARY = "Commonly needed Python modules, used by Python software developed at 
 SRC_URI = "git://github.com/osrf/osrf_pycommon;protocol=https"
 SRCREV = "e32de70e8b42dcd96bb66d29ddfb62e7fd8b795e"
 
-DEPENDS += "Fast-CDR"
+DEPENDS += "fast-cdr"
 
 S = "${WORKDIR}/git"
 

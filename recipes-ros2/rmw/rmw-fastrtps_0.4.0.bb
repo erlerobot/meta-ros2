@@ -13,7 +13,7 @@ SRC_URI[sha256sum] = "6b3f1b28775fc97422567adccaadc89c1ba9446492b8b2ee1000d7bf2d
 
 S = "${WORKDIR}/rmw_fastrtps-${PV}"
 
-DEPENDS += "rmw Fast-RTPS Fast-CDR"
+DEPENDS += "rmw fast-rtps fast-cdr"
 
 inherit ament
 
