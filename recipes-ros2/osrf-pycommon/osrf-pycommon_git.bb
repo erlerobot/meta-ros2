@@ -13,7 +13,9 @@ HOMEPAGE = "http://osrf-pycommon.readthedocs.org/"
 SUMMARY = "Commonly needed Python modules, used by Python software developed at OSRF"
 
 SRC_URI = "git://github.com/osrf/osrf_pycommon;protocol=https"
-SRCREV = "afa6d7a748e14a0fade9707a391389fa7a9ee68e"
+SRCREV = "e32de70e8b42dcd96bb66d29ddfb62e7fd8b795e"
+
+DEPENDS += "Fast-CDR"
 
 S = "${WORKDIR}/git"
 
