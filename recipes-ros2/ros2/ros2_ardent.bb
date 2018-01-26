@@ -1,6 +1,6 @@
 #
 # (C) 2017 Erle Robotics - Asier Bilbao <asier at erlerobotics dot com>
-#												 - Lander Usategui <lander at erlerobotics dot com>
+#                        - Lander Usategui <lander at erlerobotics dot com>
 # NOTE: LICENSE is being set to "CLOSED" to allow you to at least start building - if
 # this is not accurate with respect to the licensing of the software being built (it
 # will not be in most cases) you must specify the correct value before using this
@@ -58,8 +58,6 @@ DEPENDS = " \
 	urdf \
 	urdfdom-headers \
 	"
-#	tinyxml-vendor \
-#
 
 do_install () {
 	mkdir -p ${D}/opt/ros2/
