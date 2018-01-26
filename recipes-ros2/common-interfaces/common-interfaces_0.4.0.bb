@@ -11,12 +11,12 @@ LICENSE = "Apache-2.0"
 LIC_FILES_CHKSUM = "file://LICENSE;md5=3b83ef96387f14655fc854ddc3c6bd57"
 
 SRC_URI = "https://github.com/ros2/common_interfaces/archive/${PV}.tar.gz;downloadfilename=ros2_${PN}_${PV}.tar.gz"
-SRC_URI[md5sum] = "472528f62990bbd9e40e536be58a0327"
-SRC_URI[sha256sum] = "6fad840371f0563713f471ac5f67ec0eae5b6c0db24912dbf5d45157d4a07236"
+SRC_URI[md5sum] = "d8c256ee409dad3da4a3f6df2b6d00e9"
+SRC_URI[sha256sum] = "fae7f1773f28eb4403aa7677e6641a10ef3793a5f8adfc9a212c6132dca2b262"
 
 S = "${WORKDIR}/common_interfaces-${PV}"
 
-DEPENDS = "ament-cmake ament-index rmw-implementation python3-dev"
+DEPENDS = "ament-cmake ament-index python3-dev rcl-interfaces"
 
 inherit ament
 
