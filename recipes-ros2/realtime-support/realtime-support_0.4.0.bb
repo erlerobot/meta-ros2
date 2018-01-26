@@ -7,8 +7,8 @@
 LICENSE = "CLOSED"
 
 SRC_URI = "https://github.com/ros2/realtime_support/archive/${PV}.tar.gz;downloadfilename=ros2_${PN}_${PV}.tar.gz"
-SRC_URI[md5sum] = "bc56a0ae85948a6c81310c7116ba8d73"
-SRC_URI[sha256sum] = "2563a6da5da8f6ca9d7b1cc0263b80e4a4257aed6d49e994157287139af31fb8"
+SRC_URI[md5sum] = "028ed8da4b919414833b8781d75f141a"
+SRC_URI[sha256sum] = "4c7a898b3c60f10ef698708c9b153ed395195c27bf75cfb7bab67de0a6c0aa0f"
 
 DEPENDS += "tlsf rosidl-typesupport rclcpp"
 
