@@ -8,10 +8,10 @@ LICENSE = "Apache-2.0"
 LIC_FILES_CHKSUM = "file://LICENSE;md5=3b83ef96387f14655fc854ddc3c6bd57"
 
 SRC_URI = "https://github.com/ros2/demos/archive/${PV}.tar.gz;downloadfilename=ros2_${PN}_${PV}.tar.gz"
-SRC_URI[md5sum] = "e116fbd96dfde92e6964fcc2b339f81f"
-SRC_URI[sha256sum] = "14cbe2df16ac9b237504ec6f632ea9466e2dfee077ea350e79582a4ed3786b07"
+SRC_URI[md5sum] = "6d1e053bfc4b8942ed5e6eb4faf620ea"
+SRC_URI[sha256sum] = "282b39db45bff1eb7ab54cf9d0c50457e5982212c4fc52b287461173edf3b994"
 
-DEPENDS = "ament-tools rclcpp class-loader opencv example-interface"
+DEPENDS = "ament-tools rclcpp class-loader opencv example-interfaces"
 
 S = "${WORKDIR}/demos-${PV}"
 
