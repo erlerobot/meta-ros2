@@ -6,8 +6,10 @@ ament_do_compile() {
     touch ${ROS2_DIR}/setup.sh
   fi
 
-  #Change for your target machine name:
-  export SOABI=cpython-35m-${TUNE_FEATURES}-${TARGET_OS}-gnu
+  ###############################
+  # NOTE: fix -DPYTHON_SOABI
+  ###############################
+  
   . ${ROS2_DIR}/setup.sh
   export CMAKE_COMMAND=${BASE_WORKDIR}/x86_64-linux/cmake-native/3.9.5-r0/build/bin/cmake
   /usr/local/bin/ament build . --install-space ${ROS2_DIR} --force-cmake-configure --cmake-args \
@@ -26,7 +28,7 @@ ament_do_compile() {
   -DTINYXML2_LIBRARY=${BASE_WORKDIR}/${TARGET_SYS}/tinyxml2/4.0.1-r0/git/build/tinyxml2/libtinyxml2.so \
   -DPYTHON_INCLUDE_DIR=${STAGING_DIR_HOST}/usr/include/python3.5m \
   -DPYTHON_LIBRARY=${STAGING_DIR_HOST}/usr/lib/libpython3.5m.so \
-  -DPYTHON_SOABI=$SOABI \
+  -DPYTHON_SOABI=cpython-35m-#adapt to your target machine name. \
   -DEigen3_INCLUDE_DIR=${STAGING_DIR_HOST}/usr/include/eigen3/ \
   -DOpenCV_DIR=${STAGING_DIR_HOST}/usr/share/OpenCV/ \
   -Durdf_DIR=${BASE_WORKDIR}/${TARGET_SYS}/urdf/git-r0/ \
